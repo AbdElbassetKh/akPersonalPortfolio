@@ -66,9 +66,9 @@ const projects: Project[] = [
   },
   {
     id: "project-5",
-    title: "Travel Blog Platform",
+    title: "Computer Science and Automation Club | Visual Identity",
     description: "A custom-built blogging platform for travel enthusiasts with location tagging, photo galleries, and social sharing.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop",
+    image: "./CSA",
     tags: ["CMS", "Node.js", "MongoDB", "React"],
     demoUrl: "#",
     githubUrl: "#",
