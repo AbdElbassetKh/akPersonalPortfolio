@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Designer & Full-Stack Developer',
+  title: 'Abd Elbasset Khettabi | Designer & Full-Stack Developer',
   description: 'Strategic branding, UX/UI design, and full-stack development solutions',
   keywords: ['UX/UI Design', 'Full-Stack Development', 'Strategic Branding', 'Web Development', 'Portfolio'],
 };
