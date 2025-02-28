@@ -29,10 +29,10 @@ const experiences = [
     description: "Developed and maintained web applications using React, Node.js, and MongoDB, resulting in a 40% increase in client satisfaction and project delivery speed."
   },
   {
-    title: "Brand Designer",
-    company: "Creative Studio",
+    title: "Graphic Designer",
+    company: "Tanween Guelma Association",
     period: "2019 - 2021",
-    description: "Created comprehensive brand identities for startups and established businesses, including visual identity systems, guidelines, and marketing materials."
+    description: "Developing the identity and designing publications, advertisements and posters for the Tanween Guelma Cultural Association, and contributing to the Wikistage Guelma event."
   }
 ]
 
