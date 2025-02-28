@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Code, Palette, User, FileText, Send, Moon, Sun } from "lucide-react"
 
-function DirectThemeToggle() {
+function ThemeToggle() {
   const { theme, setTheme } = useTheme()
   return (
     <Button
@@ -38,106 +38,59 @@ export function Navbar() {
   const pathname = usePathname()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
-    }
+    const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isOpen)
+    return () => document.body.classList.remove("overflow-hidden")
+  }, [isOpen])
+
   return (
-    <header className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
-      scrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"
-    )}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-                    {/* Logo (Far Right) */}
-                    <div className="flex-shrink-0 h-16 flex items-center">
-            <Link href="/" className="relative h-12 w-32 flex items-center">
-              <Image 
-                src="/logo.svg" 
-                alt="Logo"
-                fill
-                sizes="(max-width: 128px) 100vw, 128px"
-                className="object-contain"
-                priority
-                quality={90}
-              />
+    <header className={cn("fixed top-0 w-full z-50 transition-all duration-300", scrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent")}> 
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="relative h-12 w-32 flex items-center">
+          <Image src="/logo.svg" alt="Logo" fill sizes="(max-width: 768px) 128px, 128px" className="object-contain" priority quality={90} />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-1">
+          {navItems.map(({ name, path, icon }) => (
+            <Link key={path} href={path} className={cn("px-3 py-2 rounded-md text-sm font-medium transition-colors", pathname === path ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-primary hover:bg-primary/10")}> 
+              <span className="flex items-center">{icon}{name}</span>
             </Link>
-          </div>
+          ))}
+        </nav>
 
-          {/* Desktop Navigation (Centered) */}
-          <nav className="hidden md:flex items-center justify-center flex-grow">
-            <div className="flex items-center space-x-1">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={cn(
-                    "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                    pathname === item.path
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/10"
-                  )}
-                >
-                  <span className="flex items-center">
-                    {item.icon}
-                    {item.name}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </nav>
-
-            {/* Theme Toggle (Far Left) */}
-            <div className="flex-shrink-0 flex items-center">
-            <DirectThemeToggle />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="flex md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="ml-2"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </div>
+        {/* Theme Toggle (Desktop Only) */}
+        <div className="hidden md:flex">
+          <ThemeToggle />
         </div>
+
+        {/* Mobile Menu Button */}
+        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen} aria-controls="mobile-menu">
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          <span className="sr-only">Toggle menu</span>
+        </Button>
       </div>
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b">
-          <div className="container mx-auto px-4 py-3">
-            <nav className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={cn(
-                    "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                    pathname === item.path
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-primary hover:bg-primary/10"
-                  )}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className="flex items-center">
-                    {item.icon}
-                    {item.name}
-                  </span>
-                </Link>
-              ))}
-              <div className="px-3 py-2 flex items-center justify-between">
-                <span className="text-sm font-medium text-muted-foreground">Theme</span>
-                <DirectThemeToggle />
-              </div>
-            </nav>
+        <div id="mobile-menu" className="md:hidden bg-background border-b">
+          <div className="container mx-auto px-4 py-3 flex flex-col space-y-2">
+            {navItems.map(({ name, path, icon }) => (
+              <Link key={path} href={path} className={cn("px-3 py-2 rounded-md text-sm font-medium transition-colors", pathname === path ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-primary hover:bg-primary/10")} onClick={() => setIsOpen(false)}> 
+                <span className="flex items-center">{icon}{name}</span>
+              </Link>
+            ))}
+            
+            {/* Theme Toggle (Mobile Only) */}
+            <div className="flex justify-center py-2">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}
