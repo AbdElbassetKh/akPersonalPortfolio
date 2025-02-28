@@ -17,10 +17,10 @@ import { Footer } from "@/components/footer"
 
 const experiences = [
   {
-    title: "Senior UX/UI Designer",
-    company: "Tech Innovations Inc.",
-    period: "2023 - Present",
-    description: "Leading design strategy for enterprise clients, managing a team of designers, and implementing design systems that improved workflow efficiency by 35%."
+    title: "Design and Brand Identity Development Team Leader",
+    company: "Computer Science and Automation Scientific Club.",
+    period: "2024 - 2025",
+    description: "Directed the design and brand identity strategy for the Computer Science and Automation Scientific Club, leading a team of designers in creating innovative visual systems and branding solutions. Implemented streamlined design processes and identity frameworks that enhanced project delivery efficiency and elevated the club’s digital and academic presence."
   },
   {
     title: "Full-Stack Developer",
