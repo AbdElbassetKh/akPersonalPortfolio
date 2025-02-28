@@ -26,9 +26,9 @@ type Project = {
 const projects: Project[] = [
   {
     id: "project-1",
-    title: "E-Commerce Rebrand",
-    description: "A complete strategic rebrand and UX overhaul for an e-commerce platform, resulting in a 40% increase in conversion rates and improved customer satisfaction.",
-    image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=1064&auto=format&fit=crop",
+    title: "British Academy Online | Visual Identity",
+    description: "A complete strategic brand and visual identity redesign for British Academy Online, an accredited educational platform by the College of London. This project enhanced the academy’s digital presence, delivering internationally recognized diplomas with certificates issued from Britain, resulting in a 25% increase in user engagement and elevated brand credibility.",
+    image: "https://www.behance.net/gallery/159753379/British-Academy-Online-Visual-Identity/modules/901397943",
     tags: ["Branding", "UX/UI Design", "Frontend Development"],
     demoUrl: "#",
     githubUrl: "#",
