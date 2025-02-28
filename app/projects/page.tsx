@@ -27,10 +27,10 @@ const projects: Project[] = [
   {
     id: "project-1",
     title: "British Academy Online | Visual Identity",
-    description: "A complete strategic brand and visual identity redesign for British Academy Online, an accredited educational platform by the College of London. This project enhanced the academy’s digital presence, delivering internationally recognized diplomas with certificates issued from Britain, resulting in a 25% increase in user engagement and elevated brand credibility.",
-    image: "https://www.behance.net/gallery/159753379/British-Academy-Online-Visual-Identity/modules/901397943",
+    description: "A complete strategic brand and visual identity design for British Academy Online, an accredited educational platform by the College of London. This project enhanced the academy’s digital presence, delivering internationally recognized diplomas with certificates issued from Britain.",
+    image: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ba6b79159753379.63a4b88cca2b9.jpg",
     tags: ["Branding", "UX/UI Design", "Frontend Development"],
-    demoUrl: "#",
+    demoUrl: "https://www.behance.net/gallery/159753379/British-Academy-Online-Visual-Identity",
     githubUrl: "#",
     featured: true
   },
