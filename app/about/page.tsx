@@ -44,9 +44,9 @@ const education = [
     description: "Specialized in User Experience Design with a focus on digital product design and research methodologies."
   },
   {
-    degree: "Bachelor of Computer Science",
-    institution: "Tech University",
-    period: "2013 - 2017",
+    degree: "Dual Bachelor in Computer Science and Automation",
+    institution: "Badji Mokhtar University - Annaba",
+    period: "2024 - 2026",
     description: "Focused on software engineering and web development, with a minor in interactive media design."
   }
 ]
