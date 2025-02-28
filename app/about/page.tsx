@@ -122,7 +122,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="font-medium">Experience</p>
-                      <p className="text-muted-foreground">4+ Years</p>
+                      <p className="text-muted-foreground">+4 Years</p>
                     </div>
                   </div>
                 </div>
