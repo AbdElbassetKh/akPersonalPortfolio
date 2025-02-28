@@ -41,7 +41,7 @@ const projects: Project[] = [
     image: "./Project2.png",
     tags: ["Full-Stack", "React", "Node.js", "Figma"],
     demoUrl: "https://csa-site.vercel.app/",
-    githubUrl: "https://github.com/AbdElbassetKh/CSA-SiteV2",
+    githubUrl: "https://github.com/AbdElbassetKh/CSA-Site",
     featured: true
   },
   {
