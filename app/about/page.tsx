@@ -115,8 +115,8 @@ export default function AboutPage() {
               >
                 <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
                   <Image
-                    src="./logo.jpg"
-                    alt="Designer working at desk"
+                    src="./Logo.jpg"
+                    alt="Abd Elbasset Khettabi - Designer & Developer"
                     fill
                     className="object-cover"
                   />
