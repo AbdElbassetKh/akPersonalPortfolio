@@ -38,12 +38,6 @@ const experiences = [
 
 const education = [
   {
-    degree: "Master of Design",
-    institution: "Design Institute",
-    period: "2017 - 2019",
-    description: "Specialized in User Experience Design with a focus on digital product design and research methodologies."
-  },
-  {
     degree: "Dual Bachelor in Computer Science and Automation",
     institution: "Badji Mokhtar University - Annaba",
     period: "2024 - 2026",
