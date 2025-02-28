@@ -17,6 +17,12 @@ import { Footer } from "@/components/footer"
 
 const experiences = [
   {
+    title: "Brand Identity Designer & Graphic Designer",
+    company: "London International College Of Graduate Studies",
+    period: "2025 - Present",
+    description: "I developed the brand identity for the London International College of Graduate Studies, designing marketing materials and innovative graphics to strengthen its global academic presence."
+  },
+  {
     title: "Design and Brand Identity Development Team Leader",
     company: "Computer Science and Automation Scientific Club",
     period: "2024 - 2025",

@@ -39,7 +39,7 @@ const projects: Project[] = [
     title: "Computer Science and Automation Specialization | Website",
     description: "A website design for the Computer Science and Automation Specialization, a program that offers a comprehensive curriculum in computer science and automation. The website features a clean, modern design with easy navigation and user-friendly interface.",
     image: "./Project2.png",
-    tags: ["UX/UI design","Full-Stack", "React", "Node.js", "Figma"],
+    tags: ["UX/UI design", "Full-Stack", "React", "Node.js", "Figma"],
     demoUrl: "https://csa-site.vercel.app/",
     githubUrl: "https://github.com/AbdElbassetKh/CSA-Site",
     featured: true
@@ -95,6 +95,12 @@ export default function ProjectsPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const projectsPerPage = 6
 
+  // دالة للتحقق مما إذا كان المشروع يتعلق بالتطوير
+  const isDevelopmentProject = (tags: string[]) => {
+    const developmentTags = ["Full-Stack", "React", "Node.js", "Next.js", "Google Maps API", "3d"]
+    return tags.some(tag => developmentTags.includes(tag))
+  }
+
   // Filter projects based on category and search query
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
@@ -123,7 +129,7 @@ export default function ProjectsPage() {
       <div className="pt-24 pb-20 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-          <Badge variant="outline" className="mb-4">Projects</Badge>
+            <Badge variant="outline" className="mb-4">Projects</Badge>
             <h1 className="text-4xl md:text-5xl font-bold font-montserrat mb-4">
               My Projects
             </h1>
@@ -197,19 +203,21 @@ export default function ProjectsPage() {
                     <Link href={project.demoUrl}>
                       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Button size="sm" className="group">
-                          View Project
+                          {isDevelopmentProject(project.tags) ? "Live Demo" : "View Project"}
                           <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </Button>
                       </motion.div>
                     </Link>
-                    <Link href={project.githubUrl}>
-                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button size="sm" variant="outline">
-                          <Github className="h-4 w-4 mr-1" />
-                          Code
-                        </Button>
-                      </motion.div>
-                    </Link>
+                    {isDevelopmentProject(project.tags) && (
+                      <Link href={project.githubUrl}>
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                          <Button size="sm" variant="outline">
+                            <Github className="h-4 w-4 mr-1" />
+                            Code
+                          </Button>
+                        </motion.div>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </motion.div>
