@@ -115,7 +115,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1170&auto=format&fit=crop"
+                    src="./logo.jpg"
                     alt="Designer working at desk"
                     fill
                     className="object-cover"
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="font-medium">Experience</p>
-                      <p className="text-muted-foreground">5+ Years</p>
+                      <p className="text-muted-foreground">4+ Years</p>
                     </div>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="font-medium">Projects</p>
-                      <p className="text-muted-foreground">50+ Completed</p>
+                      <p className="text-muted-foreground">+20 Completed</p>
                     </div>
                   </div>
                 </div>
