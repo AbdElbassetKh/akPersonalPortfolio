@@ -36,12 +36,12 @@ const projects: Project[] = [
   },
   {
     id: "project-2",
-    title: "Finance Dashboard",
-    description: "A comprehensive financial analytics dashboard with real-time data visualization, built with React, Node.js, and MongoDB.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1170&auto=format&fit=crop",
-    tags: ["Full-Stack", "Data Visualization", "React", "Node.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Computer Science and Automation Specialization | Website",
+    description: "A website design for the Computer Science and Automation Specialization, a program that offers a comprehensive curriculum in computer science and automation. The website features a clean, modern design with easy navigation and user-friendly interface.",
+    image: "./Project2.png",
+    tags: ["Full-Stack", "React", "Node.js", "Figma"],
+    demoUrl: "https://csa-site.vercel.app/",
+    githubUrl: "https://github.com/AbdElbassetKh/CSA-SiteV2",
     featured: true
   },
   {
