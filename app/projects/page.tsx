@@ -46,9 +46,9 @@ const projects: Project[] = [
   },
   {
     id: "project-3",
-    title: "Health & Wellness App",
-    description: "A mobile-first web application for health tracking with personalized recommendations, featuring a clean, intuitive interface.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop",
+    title: "London international college of graduate studies | Visual Identity",
+    description: "A complete visual identity overhaul for the London International College of Graduate Studies, elevating its global academic presence..",
+    image: "./LICGS.png",
     tags: ["Mobile Design", "UX Research", "React Native"],
     demoUrl: "#",
     githubUrl: "#",
