@@ -73,16 +73,6 @@ const projects: Project[] = [
     demoUrl: "#",
     githubUrl: "#",
     featured: false
-  },
-  {
-    id: "project-6",
-    title: "Real Estate Listings",
-    description: "A property listing website with advanced search filters, interactive maps, and virtual tours.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1073&auto=format&fit=crop",
-    tags: ["UX/UI Design", "React", "Google Maps API"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: false
   }
 ]
 
