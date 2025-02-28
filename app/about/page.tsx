@@ -85,7 +85,7 @@ export default function AboutPage() {
                   Designer & Developer of Comprehensive Digital Solutions
                 </h1>
                 <p className="text-muted-foreground text-lg mb-6">
-                  I'm a multidisciplinary designer and developer with over 5 years of experience 
+                  I'm a multidisciplinary designer and developer with over 4 years of experience 
                   creating digital products that combine strategic thinking, beautiful design, 
                   and robust technology.
                 </p>
