@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "British Academy Online | Visual Identity",
     description: "A complete strategic brand and visual identity design for British Academy Online, an accredited educational platform by the College of London. This project enhanced the academy’s digital presence, delivering internationally recognized diplomas with certificates issued from Britain.",
     image: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ba6b79159753379.63a4b88cca2b9.jpg",
-    tags: ["Branding", "UX/UI Design", "Frontend Development"],
+    tags: ["Branding", "Visual Identity", "Adobe Illustrator"],
     demoUrl: "https://www.behance.net/gallery/159753379/British-Academy-Online-Visual-Identity",
     githubUrl: "#",
     featured: true
@@ -39,7 +39,7 @@ const projects: Project[] = [
     title: "Computer Science and Automation Specialization | Website",
     description: "A website design for the Computer Science and Automation Specialization, a program that offers a comprehensive curriculum in computer science and automation. The website features a clean, modern design with easy navigation and user-friendly interface.",
     image: "./Project2.png",
-    tags: ["Full-Stack", "React", "Node.js", "Figma"],
+    tags: ["UX/UI design","Full-Stack", "React", "Node.js", "Figma"],
     demoUrl: "https://csa-site.vercel.app/",
     githubUrl: "https://github.com/AbdElbassetKh/CSA-Site",
     featured: true
