@@ -56,12 +56,12 @@ const projects: Project[] = [
   },
   {
     id: "project-4",
-    title: "Restaurant Booking System",
+    title: "Computer Parts Exhibition | Website",
     description: "A full-stack booking system for restaurants with real-time availability, user accounts, and an admin dashboard.",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1170&auto=format&fit=crop",
-    tags: ["Full-Stack", "Next.js", "PostgreSQL", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+    image: "./Ex.png",
+    tags: ["UX/UI", "Full-Stack", "Next.js", "3d"],
+    demoUrl: "https://csa-exibition.vercel.app",
+    githubUrl: "https://github.com/AbdElbassetKh/CSA-EXIBITION",
     featured: false
   },
   {
