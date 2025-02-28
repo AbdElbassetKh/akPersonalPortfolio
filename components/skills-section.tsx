@@ -23,12 +23,12 @@ const skills = [
   {
     category: "Frontend",
     icon: <Code className="h-6 w-6" />,
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Qwik"]
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
   {
     category: "Backend",
     icon: <Database className="h-6 w-6" />,
-    items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs", "GraphQL"]
+    items: ["Node.js", "MongoDB", "PostgreSQL", "REST APIs"]
   },
   {
     category: "Other",
