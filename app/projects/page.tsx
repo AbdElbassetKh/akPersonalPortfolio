@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     id: "project-4",
     title: "Computer Parts Exhibition | Website",
-    description: "A full-scale design and development of an immersive website for the Computer Parts 3D Exhibition, featuring interactive 3D showcases of cutting-edge hardware. This project delivered a visually stunning and user-friendly platform.",
+    description: "A full-scale design and development of an immersive website for the Computer Parts 3D Exhibition, featuring interactive 3D showcases of cutting-edge hardware.",
     image: "./Ex.png",
     tags: ["UX/UI", "Full-Stack", "Next.js", "3d"],
     demoUrl: "https://csa-exibition.vercel.app",
