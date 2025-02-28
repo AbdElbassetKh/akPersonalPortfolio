@@ -47,7 +47,7 @@ const education = [
     degree: "Dual Bachelor in Computer Science and Automation",
     institution: "Badji Mokhtar University - Annaba",
     period: "2024 - 2026",
-    description: "Focused on software engineering and web development, with a minor in interactive media design."
+    description: "A comprehensive program combining core principles of computer science with automation technologies, emphasizing software development, system integration, and intelligent control systems. The curriculum includes advanced topics in programming, algorithms, robotics, and industrial automation, preparing students for innovative roles in technology and engineering fields."
   }
 ]
 
