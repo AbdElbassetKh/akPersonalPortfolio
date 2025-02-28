@@ -18,15 +18,15 @@ import { Footer } from "@/components/footer"
 const experiences = [
   {
     title: "Design and Brand Identity Development Team Leader",
-    company: "Computer Science and Automation Scientific Club.",
+    company: "Computer Science and Automation Scientific Club",
     period: "2024 - 2025",
     description: "Directed the design and brand identity strategy for the Computer Science and Automation Scientific Club, leading a team of designers in creating innovative visual systems and branding solutions. Implemented streamlined design processes and identity frameworks that enhanced project delivery efficiency and elevated the club’s digital and academic presence."
   },
   {
-    title: "Full-Stack Developer",
-    company: "Digital Solutions Agency",
-    period: "2021 - 2023",
-    description: "Developed and maintained web applications using React, Node.js, and MongoDB, resulting in a 40% increase in client satisfaction and project delivery speed."
+    title: "Graphic Designer",
+    company: "Bunian Volunteer Project",
+    period: "2021 - 2024",
+    description: "Social media designs, advertisements and posters for the Binyan Volunteer Project to enrich Arabic content and spread awareness and sound thinking among young people.."
   },
   {
     title: "Graphic Designer",
