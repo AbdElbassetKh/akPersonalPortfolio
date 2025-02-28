@@ -48,7 +48,7 @@ const projects: Project[] = [
     id: "project-3",
     title: "London international college of graduate studies | Visual Identity",
     description: "A complete visual identity overhaul for the London International College of Graduate Studies, elevating its global academic presence..",
-    image: "./LICGS.png",
+    image: "./LICGS,jpg",
     tags: ["Mobile Design", "UX Research", "React Native"],
     demoUrl: "#",
     githubUrl: "#",
