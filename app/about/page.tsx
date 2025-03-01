@@ -53,8 +53,8 @@ const education = [
 
 const technologies = [
   {
-    name: "Qwik",
-    description: "Exploring Qwik's resumable approach to eliminate hydration and deliver instant-loading web applications."
+    name: "No Code Development",
+    description: "Exploring no-code development platforms to streamline the development process and create scalable web applications without writing code."
   },
   {
     name: "AI Integration",
