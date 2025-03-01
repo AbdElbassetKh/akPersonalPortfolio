@@ -8,53 +8,19 @@ import { ArrowUpRight, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-
-type Project = {
-  id: string
-  title: string
-  description: string
-  image: string
-  tags: string[]
-  demoUrl: string
-  githubUrl: string
-  featured: boolean
-}
-
-const projects: Project[] = [
-  {
-    id: "project-1",
-    title: "British Academy Online | Visual Identity",
-    description: "A complete strategic brand and visual identity design for British Academy Online, an accredited educational platform by the College of London. This project enhanced the academy’s digital presence, delivering internationally recognized diplomas with certificates issued from Britain.",
-    image: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ba6b79159753379.63a4b88cca2b9.jpg",
-    tags: ["Branding", "Visual Identity", "Adobe Illustrator"],
-    demoUrl: "https://www.behance.net/gallery/159753379/British-Academy-Online-Visual-Identity",
-    githubUrl: "#",
-    featured: true
-  },
-  {
-    id: "project-2",
-    title: "Computer Science and Automation Specialization | Website",
-    description: "A website design for the Computer Science and Automation Specialization, a program that offers a comprehensive curriculum in computer science and automation. The website features a clean, modern design with easy navigation and user-friendly interface.",
-    image: "./Project2.png",
-    tags: ["UX/UI design","Full-Stack", "React", "Node.js", "Figma"],
-    demoUrl: "https://csa-site.vercel.app/",
-    githubUrl: "https://github.com/AbdElbassetKh/CSA-Site",
-    featured: true
-  },
-  {
-    id: "project-3",
-    title: "London international college of graduate studies | Visual Identity",
-    description: "A complete visual identity overhaul for the London International College of Graduate Studies, elevating its global academic presence..",
-    image: "./LICGS.jpg",
-    tags: ["Branding", "Visual Identity", "Adobe Illustrator"],
-    demoUrl: "#",
-    githubUrl: "#",
-    featured: true
-  }
-]
+import { projects, Project } from "@/app/projects/page" // استيراد projects و Project
 
 export function FeaturedProjects() {
   const [hoveredId, setHoveredId] = useState<string | null>(null)
+
+  // دالة للتحقق مما إذا كان المشروع يتعلق بالتطوير
+  const isDevelopmentProject = (tags: string[]) => {
+    const developmentTags = ["Full-Stack", "React", "Node.js", "Next.js", "Google Maps API", "3d"]
+    return tags.some(tag => developmentTags.includes(tag))
+  }
+
+  // تصفية المشاريع المفضلة فقط
+  const featuredProjects = projects.filter(project => project.featured)
 
   return (
     <section className="py-20 bg-muted/30">
@@ -70,7 +36,7 @@ export function FeaturedProjects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -113,19 +79,21 @@ export function FeaturedProjects() {
                   <Link href={project.demoUrl}>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                       <Button size="sm" className="group">
-                        View Project
+                        {isDevelopmentProject(project.tags) ? "Live Demo" : "View Project"}
                         <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                       </Button>
                     </motion.div>
                   </Link>
-                  <Link href={project.githubUrl}>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button size="sm" variant="outline">
-                        <Github className="h-4 w-4 mr-1" />
-                        Code
-                      </Button>
-                    </motion.div>
-                  </Link>
+                  {isDevelopmentProject(project.tags) && (
+                    <Link href={project.githubUrl}>
+                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button size="sm" variant="outline">
+                          <Github className="h-4 w-4 mr-1" />
+                          Code
+                        </Button>
+                      </motion.div>
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

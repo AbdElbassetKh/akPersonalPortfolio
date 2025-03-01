@@ -12,7 +12,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { cn } from "@/lib/utils"
 
-type Project = {
+export type Project = {
   id: string
   title: string
   description: string
@@ -23,7 +23,7 @@ type Project = {
   featured: boolean
 }
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     id: "project-1",
     title: "British Academy Online | Visual Identity",
@@ -85,13 +85,11 @@ export default function ProjectsPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const projectsPerPage = 6
 
-  // دالة للتحقق مما إذا كان المشروع يتعلق بالتطوير
   const isDevelopmentProject = (tags: string[]) => {
     const developmentTags = ["Full-Stack", "React", "Node.js", "Next.js", "Google Maps API", "3d"]
     return tags.some(tag => developmentTags.includes(tag))
   }
 
-  // Filter projects based on category and search query
   const filteredProjects = projects.filter((project) => {
     const matchesCategory =
       activeCategory === "All" ||
@@ -106,7 +104,6 @@ export default function ProjectsPage() {
     return matchesCategory && matchesSearch
   })
 
-  // Calculate pagination
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage)
   const paginatedProjects = filteredProjects.slice(
     (currentPage - 1) * projectsPerPage,
